@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="60dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/calendar"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/ic"
+        android:contentDescription="TODO" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Timetable"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:id="@+id/newtt"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/ic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of Timetable"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv"
+        android:layout_below="@id/newtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newName"
+        android:layout_marginBottom="10dp"
+        android:inputType="text"
+        android:layout_below="@id/tv"
+        android:autofillHints="" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nr"
+        android:text="Number of rows"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/newName"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/nr"
+        android:id="@+id/select1"
+        android:entries="@array/val">
+    </Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of columns"
+        android:layout_below="@id/select1"
+        android:textSize="25sp"
+        android:id="@+id/nc"
+        android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nc"
+        android:entries="@array/val"
+        android:id="@+id/select2"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CreateTable"
+        android:layout_below="@id/select2"
+        android:background="#5c9cb0"
+        android:text="create table"
+        android:textColor="#ffffff"
+        android:textSize="20sp"/>
+</RelativeLayout>
